@@ -1,3 +1,16 @@
+<?php
+    require_once __DIR__ . '/inc/db.php';
+
+    $sql = "SELECT * FROM topmenu";
+    $result = $conn->query($sql);
+    $menus = [];
+    if ($result && $result->num_rows > 0) {
+            $menus = $result->fetch_all(MYSQLI_ASSOC);
+    } else {
+            "data not found";
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,9 +47,73 @@
                 <a href="reservation.php">Reservation Now</a>
             </div>
         </div>
-        <div>
-            test
+        <div class="container">
+            <div class="section-best-menu">
+                <h1>Menu Terbaik Kami</h1>
+            </div>
+            <div class="menu-container">
+                <?php foreach ($menus as $menu): ?>
+                    <div class="card">
+                        <img src="<?php echo "image/{$menu['gambar']}"; ?>" alt="<?php echo $menu['nama']; ?>">
+                        <div class="card-content">
+                            <h3><?php echo $menu['nama']; ?></h3>
+                            <p><?php echo $menu['deskripsi']; ?></p>
+                            <div class="section-btn">
+                                <span class="price">Rp. <?php echo number_format($menu['harga'], 0, ',', '.'); ?></span>
+                                <a href="#" class="btn-menu">Menu</a>
+                            </div>
+                        </div>
+                    </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+        <div class="banner">
+            <img src="./image/grind.png" alt="coffe grind">
+            <h2>Kopi yang tidak hanya dinikmati, tapi juga memberi ruang untuk bercerita, bekerja, atau sekadar melepas penat.</h2>
+            <img src="./image/ground.png" alt="ground picture">
+        </div>
+        <div class="facility">
+            <div class="section-best-menu">
+                <h1>Fasilitas Kami</h1>
+            </div>
+            <div class="gallery">
+                <div class="picture1">
+                    <h4>Area Depan</h4>
+                </div>
+                <div class="group"> 
+                    <div class="group-1">
+                        <div class="picture2">
+                            <h4>Wifi Gratis</h4>
+                        </div>
+                        <div class="picture3">
+                            <h4>Area Meeting 10 Orang</h4>
+                        </div>                    
+                    </div>
+                    <div class="group-2">
+                        <div class="picture4">
+                            <h4>Area Merokok</h4>
+                        </div>
+                        <div class="picture5">
+                            <h4>Area Nobar</h4>
+                        </div>
+                    </div>                                
+                </div>
+            </div>
         </div>
     </main>
+    <footer class="footer">
+        <div class="section1">
+            <h4>Home</h4>
+        </div>
+        <div class="section2">
+            <h4>Home</h4>
+        </div>
+        <div class="section3">
+            <h4>Home</h4>
+        </div>
+        <div class="section4">
+            <h4>Home</h4>
+        </div>
+    </footer>
 </body>
 </html>

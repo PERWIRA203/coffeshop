@@ -9,12 +9,13 @@ body {
     background-color: #E2B179;
     position: fixed;
     width: 100%;
-    height: 130px;
+    height: 19%;
     display: flex;
     justify-content: space-between;
-    padding: 0 50px;
+    padding: 0 5%;
     align-items: center;
     box-sizing: border-box;
+    z-index: 100; 
 }
 .logo img {
     border-radius: 50%;
@@ -38,7 +39,7 @@ body {
     text-decoration: underline;
 }
 .signup {
-    width: 8%;
+    width: 10%;
     padding: 10px 20px;
     background-color: #C08267;
     color: #fff;
@@ -51,6 +52,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: 0.8s;
 }
 .signup a {
     color: #fff;
@@ -59,9 +61,12 @@ body {
     font-weight: 1;
 }
 .signup:hover {
-    color: #2B1712;
     transform: scale(1.05);   
     box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+}
+.signup:hover a {
+    color: #2B1712;
+    transition: 0.8s;
 }
 
 /* main */
@@ -79,7 +84,7 @@ body {
 }
 .button-reservation {
     width: 20%;
-    padding: 15px;
+    padding: 1%;
     margin-bottom: 10%;
     background-image: linear-gradient(to right, #A0583C, #C08267);
     display: flex;
@@ -107,15 +112,246 @@ body {
     color: #2B1712;
 }
 .background {
-    background-image: linear-gradient(rgba(24, 23, 23, 0.5), rgba(24, 23, 23, 0.5)),url('../image/bg1.png');
+    background-image: linear-gradient(rgba(46, 43, 43, 0.5), rgba(46, 43, 43, 0.5)),url('../image/bg1.png');
     background-position: center;
     background-size: cover;   
     background-repeat: no-repeat;
     width: 100%;
-    margin-top: 130px;
+    margin-top: 8.6%;
     height: 81.75vh;      
     display: grid;
     grid-template-columns: 1fr; 
     align-items: center;
     justify-items: center;
+}
+.container {
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    background-color: #FFFADA;
+    display: grid;
+}
+.section-best-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-best-menu h1 {
+    font-weight: 20;
+    font-family: pacifico;
+    color: #2B1712;
+    font-size: 38px;
+}
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-auto-rows: minmax(300px, auto);
+    gap: 25px;
+}
+.card {
+    background-image: linear-gradient(to right, #A0583C, #C08267);
+    box-shadow: 0px 6px 12px rgba(0,0,0,0.2);
+    border-radius: 13px;
+    transition: 0.7s;  
+}
+.card:hover {
+    transform: scale(1.05);
+    display: inline-block;
+    position: relative;
+}
+.card img {
+    border-radius: 13px;
+    width: 90%;
+    height: 410px;
+    object-fit: cover;
+    display: block;
+    margin: 15px auto 0; 
+}
+.card-content {
+    padding: 15px;
+    color: #fff;
+}
+.card-content h3 {
+    margin: 0 0 10px;
+    font-size: 20px;
+}
+.card-content p {
+    font-size: 12px;
+    margin: 0 0 15px;
+}
+.price {
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding-top: 20px;
+}
+.btn-menu {
+    background-color: #2B1712;
+    color: #fff;
+    text-decoration: none;
+    padding: 4px 30px;
+    border-radius: 6px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn-menu:hover {
+    background-color: #E2B179;
+    color: #2B1712;
+}
+.banner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5% 4%;
+    background-color: #E2B179;
+    font-family: pacifico;
+    color: #2B1712;
+    text-align: center;
+}
+.banner img {
+    width: 15%;
+    height: auto;
+}
+.banner h2 {
+    width: 55%;
+    font-size: 28px;
+    font-weight: 20;
+}
+.facility {
+    height: auto;
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-bottom: 5%;
+    background-color: #FFFADA;
+    display: grid;
+}
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+.picture1 {
+    background-image: url('../image/area-depan.png');
+    background-position: center;
+    background-size: cover;   
+    background-repeat: no-repeat;
+    width: 45%;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    font-family: poppins;
+    font-size: 23px;
+    color: #fff;
+}
+.picture1 h4 {
+    margin-top: 42%;
+    padding-bottom: 0;
+}
+.group-1 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    column-gap: 20px;
+    height: 28vh;
+}
+.group {
+    width: 55%;
+    display: flex;
+    flex-direction: column;
+}
+.picture2 {
+    background-image: url('../image/wifi.png');
+    background-position: center;
+    background-size: cover;   
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    align-items: last baseline;
+    font-family: poppins;
+    font-size: 18px;
+    color: #fff;
+}
+.picture3 {
+    background-image: url('../image/meeting.png');
+    background-position: center;
+    background-size: cover;   
+    background-repeat: no-repeat;
+    padding: 0 20%;
+    width: 100%;
+    height: 90%;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-self: start baseline;
+    align-items: last baseline;
+    font-family: poppins;
+    font-size: 18px;
+    color: #fff;
+}
+.group-2 {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    height: 30.1vh;
+    gap: 20px;
+}
+.picture4 {
+    background-image: url('../image/smoke.png');
+    background-position: center;
+    background-size: cover;   
+    background-repeat: no-repeat;
+    padding: 0 20%;
+    width: 40%;
+    height: 90%;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-self: last baseline;
+    align-items: last baseline;
+    font-family: poppins;
+    font-size: 18px;
+    color: #fff;
+}
+.picture5 {
+    background-image: url('../image/nobar.png');
+    background-position: center;
+    background-size: cover;   
+    background-repeat: no-repeat;
+    width: 40%;
+    height: 100%;
+    border-radius: 13px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-self: last baseline;
+    align-items: last baseline;
+    font-family: poppins;
+    font-size: 18px;
+    color: #fff;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    padding: 2% 8%;
+    font-family: poppins;
+    gap: 25%;
 }
