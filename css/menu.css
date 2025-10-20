@@ -1,6 +1,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #FFFADA;
 }
 
 .header {
@@ -130,7 +131,7 @@ body {
     color: #2B1712;
 }
 .background {
-    background-image: linear-gradient(rgba(46, 43, 43, 0.5), rgba(46, 43, 43, 0.5)),url('../image/bg1.png');
+    background-image: linear-gradient(rgba(46, 43, 43, 0.5), rgba(46, 43, 43, 0.5)),url('../image/bg2.png');
     background-position: center;
     background-size: cover;   
     background-repeat: no-repeat;
@@ -236,6 +237,7 @@ body {
     font-family: pacifico;
     color: #2B1712;
     text-align: center;
+    margin-bottom: 5%;
 }
 .banner img {
     width: 15%;

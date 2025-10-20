@@ -20,8 +20,8 @@
             <img src="image/logo.jpg" alt="Logo" width="100" height="100">
         </div>
         <nav class="navbar">
-            <a href="#" class="active">Home</a>
-            <a href="about.php" >About Us</a>
+            <a href="index.php">Home</a>
+            <a href="#" class="active">About Us</a>
             <a href="facility.html">Facility</a>
             <a href="menu.php">Menu</a>
             <a href="review.php">Review</a>
@@ -35,7 +35,7 @@
             ?>
             <div class="profile">
                 <img src="image/profile.png" alt="">
-                <span class="username"><a href="profile.php"><?php echo htmlspecialchars($firstName); ?></a></span>
+                <span class="username"><a href=""><?php echo htmlspecialchars($firstName); ?></a></span>
             </div>
         <?php else: ?>
             <a href="signup.php">Sign Up</a>
